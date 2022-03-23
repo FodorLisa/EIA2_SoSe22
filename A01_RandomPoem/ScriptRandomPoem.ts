@@ -2,7 +2,7 @@ namespace ScriptRandomPoem {
     //Arrays zu Erstellung der Zufallsgedichte
     let subjekt: string [] = ["Gandalf", "Frodo", "Bilbo", "Gimli", "Legolas", "Aragorn", "Sam", "Pippin", "Gollum"];
     let prädikat: string [] = ["tötet", "kämpft", "reitet", "sticht", "rettet", "verfolgt", "bläst", "fliegt", "läuft"];
-    let objekte: string [] = ["die Uruk-hai", "Kankra", "Schwert", "Andúril", "Brego", "das Horn von Gondor", "nach Bruchtal", "zum Schicksalsberg"];
+    let objekte: string [] = ["die Uruk-hai", "Kankra", "Schwert", "Andúril", "Brego", "das Horn von Gondor", "nach Bruchtal", "zum Schicksalsberg", "Rohan"];
 
     //console.log(subjekt, prädikat, objekte);
 

@@ -4,7 +4,7 @@ var ScriptRandomPoem;
     //Arrays zu Erstellung der Zufallsgedichte
     let subjekt = ["Gandalf", "Frodo", "Bilbo", "Gimli", "Legolas", "Aragorn", "Sam", "Pippin", "Gollum"];
     let prädikat = ["tötet", "kämpft", "reitet", "sticht", "rettet", "verfolgt", "bläst", "fliegt", "läuft"];
-    let objekte = ["die Uruk-hai", "Kankra", "Schwert", "Andúril", "Brego", "das Horn von Gondor", "nach Bruchtal", "zum Schicksalsberg"];
+    let objekte = ["die Uruk-hai", "Kankra", "Schwert", "Andúril", "Brego", "das Horn von Gondor", "nach Bruchtal", "zum Schicksalsberg", "Rohan"];
     //console.log(subjekt, prädikat, objekte);
     //For-Schleife um Gedicht zu erstellen bis Wert 1 erreicht ist
     for (let index = subjekt.length; index >= 1; index--) {
