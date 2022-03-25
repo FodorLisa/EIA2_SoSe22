@@ -15,3 +15,7 @@ div {
     width: 10px;
     height: 10px;
 }
+.AufgabeÜbersicht {
+    border: thick solid gray;
+    position: absolute;
+}
