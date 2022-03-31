@@ -1,0 +1,33 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+}
+body {
+    background-image: url(654011.jpg);
+}
+div {
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    padding-top: 400px;
+    padding-left: 350px;
+    top: 100px;
+}
+#div0 {
+    left: 50px;
+}
+#div1 {
+    left: 450px;
+}
+#span1 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    height: 100px;
+    width: 150px;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightcyan;
+    text-align: left;
+}
