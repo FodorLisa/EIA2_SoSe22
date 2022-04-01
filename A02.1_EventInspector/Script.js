@@ -20,12 +20,12 @@ var EventInspector;
     }
     //setInfoBox implementieren
     function setInfoBox(_event) {
-        let x = _event.showX + 10;
-        let y = _event.showY + 10;
+        let x = _event.pageX;
+        let y = _event.pageY;
         let target = _event.target;
-        let span = document.getElementById("span1");
+        let span = document.getElementById("span01");
         //display mouse position and event's traget in span-element
-        span.innerHTML = "position x:" + x + "" + "position y" + y + "" + "target" + target;
+        span.innerHTML = "position x:" + x + "<br>" + "position y:" + y + "<br>" + "target:" + "" + target;
         //set style attributes top and left of span to mouseposition + offset
         span.style.top = (y) + "px";
         span.style.left = (x) + "px";

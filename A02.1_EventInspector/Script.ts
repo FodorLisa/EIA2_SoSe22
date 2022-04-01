@@ -25,13 +25,13 @@ namespace EventInspector {
     //setInfoBox implementieren
     function setInfoBox(_event: MouseEvent): void{
 
-        let x: number = _event.showX + 10;
-        let y: number = _event.showY + 10;
+        let x: number = _event.pageX ;
+        let y: number = _event.pageY;
         let target: EventTarget = _event.target;
-        let span: HTMLElement = document.getElementById("span1");
+        let span: HTMLElement = document.getElementById("span01");
         
         //display mouse position and event's traget in span-element
-        span.innerHTML = "position x:" + x + "" + "position y" + y + "" + "target" + target;
+        span.innerHTML = "position x:" + x + "<br>" + "position y:" + y + "<br>" + "target:" +  "" + target;
         //set style attributes top and left of span to mouseposition + offset
         span.style.top = (y) + "px";
         span.style.left = (x) + "px";
