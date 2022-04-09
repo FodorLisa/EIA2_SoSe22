@@ -40,4 +40,4 @@ namespace Boxes {
         div.style.left = _x + "px";
         div.style.top = _y + "px";
     }
-}
+}}
