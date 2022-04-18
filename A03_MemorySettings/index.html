@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+  <title>Memory Settings</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>   <a href="../A03_MemorySettings/Konzept/Konzept_MemorySettings.pdf">MemorySettings Konzept</a>
+</header>
+<body>
+  <div id="menuBox">
+    <h1>Memory</h1>
+    <p>Menu</p>
+    <form>
+      <label for="numberPairs">Number of Pairs</label>
+      <input id="numberPairs" type="number" min="5" max="25" step="5" value="5" name="numberOfPairs">
+      <br>
+      <br>
+      <label for="myRange">Size of Cards</label>
+      <input id="myRange" min="5" max="500" value="100" type="range" name="cardsSize">
+      <br>
+      <br>
+      <label for="background">Background Color</label>
+      <input id="background" type="color" value="#d2f8f8" name="backgroundColor">
+      <br>
+      <br>
+      <label for="font">Font Color</label>
+      <input id="font" type="color" value="#000000" name="fontColor">
+      <br>
+      <br>
+      <label for="cards">Cards Color</label>
+      <input id="cards" type="color" value="#f8d2d2" name="cardsColor">
+      <br>
+      <br>
+      <label for="selectFont">Pick your Font</label>
+      <select id="selectFont" name="fontFamily" >
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+      </select>
+    </form>
+    <button id="start">Start</button>
+  </div>
+
+  <div id="gameBox" class="hidden">
+    <h1>Memory</h1>
+    <span id="timer">0min 0s</span>
+    <div id="cardBox"></div>
+  </div>
+
+  <div id="endBox" class="hidden"></div>
+
+</body>
+</html>
