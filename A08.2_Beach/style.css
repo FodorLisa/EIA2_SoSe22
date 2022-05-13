@@ -1,0 +1,10 @@
+body{
+    background-color: darkgrey;
+}
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+#canvas {
+    width: 90%;
+}

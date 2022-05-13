@@ -4,3 +4,14 @@ canvas {
     border-color: white;
     background-color: black;
 }
+function drawSand(): void {
+    console.log("Beach");
+
+    let gradient: CanvasGradient =crc2.createLinearGradient(350, 600, crc2.canvas.width, 150);
+
+    gradient.addColorStop(0, "rgb(252, 186, 3)"); //Sand Dunkel
+    gradient.addColorStop(1, "rgb(255, 212, 92"); //Sand Hell
+
+    crc2.fillStyle = gradient;
+    crc2.fillRect (0, 0, crc2.canvas.width, 150);
+}
