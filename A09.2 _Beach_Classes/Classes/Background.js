@@ -1,8 +1,7 @@
-"use strict";
 var BeachClasses;
 (function (BeachClasses) {
-    class Background {
-        constructor() {
+    var Background = /** @class */ (function () {
+        function Background() {
             this.drawSky(0, 0);
             this.drawOcean(0, 225);
             this.drawSand(0, 300);
@@ -23,25 +22,25 @@ var BeachClasses;
         }
         //Methoden
         //Himmel 
-        drawSky(_x, _y) {
+        Background.prototype.drawSky = function (_x, _y) {
             console.log("Background");
-            let gradient = BeachClasses.crc2.createLinearGradient(0, 0, 0, 200);
+            var gradient = BeachClasses.crc2.createLinearGradient(0, 0, 0, 200);
             gradient.addColorStop(0, "blue");
             gradient.addColorStop(1, "lightblue");
             BeachClasses.crc2.fillStyle = gradient;
             BeachClasses.crc2.fillRect(0, 0, BeachClasses.crc2.canvas.width, 225);
-        }
+        };
         //Meer
-        drawOcean(_x, _y) {
+        Background.prototype.drawOcean = function (_x, _y) {
             console.log("Ocean");
-            let gradient = BeachClasses.crc2.createLinearGradient(0, 0, 0, 320);
+            var gradient = BeachClasses.crc2.createLinearGradient(0, 0, 0, 320);
             gradient.addColorStop(0.8, "darkblue");
             gradient.addColorStop(1, "blue");
             BeachClasses.crc2.fillStyle = gradient;
             BeachClasses.crc2.fillRect(0, 225, BeachClasses.crc2.canvas.width, 225);
-        }
+        };
         //Sand
-        drawSand(_x, _y) {
+        Background.prototype.drawSand = function (_x, _y) {
             console.log("Beach");
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.moveTo(_x, _y);
@@ -51,12 +50,12 @@ var BeachClasses;
             BeachClasses.crc2.closePath();
             BeachClasses.crc2.fillStyle = "rgb(252, 186, 3)";
             BeachClasses.crc2.fill();
-        }
+        };
         //Sonne
-        drawSun(_x, _y) {
-            let r1 = 30;
-            let r2 = 150;
-            let gradient = BeachClasses.crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
+        Background.prototype.drawSun = function (_x, _y) {
+            var r1 = 30;
+            var r2 = 150;
+            var gradient = BeachClasses.crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
             gradient.addColorStop(0, "HSLA(60, 100%, 90%, 1");
             gradient.addColorStop(1, "HSLA(60, 100%, 90%, 0");
             BeachClasses.crc2.save();
@@ -65,9 +64,9 @@ var BeachClasses;
             BeachClasses.crc2.arc(0, 0, r2, 0, 2 * Math.PI);
             BeachClasses.crc2.fill();
             BeachClasses.crc2.restore();
-        }
+        };
         //Handtuch
-        drawTowel(_x, _y) {
+        Background.prototype.drawTowel = function (_x, _y) {
             BeachClasses.crc2.beginPath(),
                 BeachClasses.crc2.moveTo(_x + 100, _y + 150),
                 BeachClasses.crc2.lineTo(_x + 50, _y + 150),
@@ -78,10 +77,10 @@ var BeachClasses;
                 BeachClasses.crc2.fillStyle = "#2aa5a5",
                 BeachClasses.crc2.lineWidth = 0.5,
                 BeachClasses.crc2.fill();
-        }
+        };
         ;
         //Palme
-        drawPalmTree(_x, _y) {
+        Background.prototype.drawPalmTree = function (_x, _y) {
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.moveTo(_x + 195, _y + 0);
             BeachClasses.crc2.lineTo(_x + 195, _y + 160);
@@ -155,8 +154,8 @@ var BeachClasses;
             BeachClasses.crc2.fillStyle = "green";
             BeachClasses.crc2.lineWidth = 0.5;
             BeachClasses.crc2.fill();
-        }
-        drawPerson(_x, _y, _clothes, _color) {
+        };
+        Background.prototype.drawPerson = function (_x, _y, _clothes, _color) {
             // Hände
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.arc(_x + 12.5, _y + 42, 5, 0, 2 * Math.PI);
@@ -222,8 +221,8 @@ var BeachClasses;
             BeachClasses.crc2.stroke();
             BeachClasses.crc2.fillStyle = "#FEC7B2";
             BeachClasses.crc2.fill();
-        }
-        drawSwimmer(_x, _y) {
+        };
+        Background.prototype.drawSwimmer = function (_x, _y) {
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.moveTo(_x + 37.5, _y + 20);
             BeachClasses.crc2.lineTo(_x + 12.5, _y + 37.5);
@@ -253,8 +252,8 @@ var BeachClasses;
             BeachClasses.crc2.stroke();
             BeachClasses.crc2.fillStyle = "#FEC7B2";
             BeachClasses.crc2.fill();
-        }
-        drawSurfer(_x, _y) {
+        };
+        Background.prototype.drawSurfer = function (_x, _y) {
             //Kopf
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.arc(_x + 37.5, _y + 12.5, 12.5, 0, 2 * Math.PI);
@@ -336,16 +335,17 @@ var BeachClasses;
             BeachClasses.crc2.stroke();
             BeachClasses.crc2.fillStyle = "#FEC7B2";
             BeachClasses.crc2.fill();
-        }
+        };
         //Surfboard
-        drawSurfBoard(_x, _y) {
+        Background.prototype.drawSurfBoard = function (_x, _y) {
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.ellipse(540, 290, 25, 60, Math.PI / 3, 0, 2 * Math.PI);
             BeachClasses.crc2.stroke();
             BeachClasses.crc2.fillStyle = "#FFFF99";
             BeachClasses.crc2.fill();
-        }
-    }
+        };
+        return Background;
+    }());
     BeachClasses.Background = Background;
 })(BeachClasses || (BeachClasses = {}));
 //# sourceMappingURL=Background.js.map

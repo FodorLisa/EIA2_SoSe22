@@ -1,12 +1,9 @@
 namespace BeachClasses {
-
     export class Cloud {
-
         x: number;
         y: number;
         speed: number;
 
-    
         drawCloud(): void {
             crc2.beginPath();
             crc2.arc(this.x, this.y, 25, 0, 2 * Math.PI); // dritte Zahl = Durchmesser
@@ -17,12 +14,16 @@ namespace BeachClasses {
             crc2.closePath();
             crc2.fillStyle = "#FFFFFF";
             crc2.fill();
-
         }
 
         moveForward(): void {
-            this.x += this.speed * (+0.5) ; // - nach links und + nach rechts           
+            this.x += this.speed * +0.5; // - nach links und + nach rechts
+            if (this.x < 0) {
+                this.x = this.x + crc2.canvas.width;
+            }
+            if (this.x > crc2.canvas.width) {
+                this.x = this.x - crc2.canvas.width;
+            }
         }
-
     } // Close class
 } // End namespace
