@@ -113,6 +113,7 @@ var L08Strand;
         crc2.lineWidth = 0.5;
         crc2.fill();
     }
+    //Palme
     function drawPalmTree(_position) {
         crc2.beginPath();
         crc2.moveTo(_position.x + 195, _position.y + 0);
@@ -230,18 +231,18 @@ var L08Strand;
         crc2.bezierCurveTo(40, 89, 42, 89, 44, 88);
         crc2.bezierCurveTo(46, 88, 47, 89, 48, 91);
         crc2.bezierCurveTo(49, 92, 50, 93, 50, 94);
-        crc2.bezierCurveTo(50.858896, 94.430177, 51.112094, 95.012535, 51.251640, 95.323360);
-        crc2.bezierCurveTo(51.498534, 95.561562, 51.391123, 95.997052, 51.599041, 96.255267);
-        crc2.bezierCurveTo(51.685051, 96.362082, 51.825527, 96.525251, 51.950593, 96.468984);
-        crc2.bezierCurveTo(54.864698, 95.157956, 55.255270, 95.084081, 56.641354, 93.301374);
-        crc2.bezierCurveTo(57.707029, 91.885697, 59.011758, 90.730606, 60.501535, 89.783731);
-        crc2.bezierCurveTo(59.622390, 90.300491, 58.721143, 90.781369, 57.864102, 91.334015);
-        crc2.bezierCurveTo(57.649601, 91.472331, 58.322061, 91.101782, 58.567277, 91.030998);
-        crc2.bezierCurveTo(58.858499, 90.946938, 59.159819, 90.884281, 59.462704, 90.872560);
-        crc2.bezierCurveTo(61.841517, 90.780500, 64.302144, 91.418980, 66.617156, 91.838747);
-        crc2.bezierCurveTo(70.887412, 92.671076, 68.797780, 92.239646, 72.887130, 93.127826);
-        crc2.lineTo(75.828302, 91.084253);
-        crc2.lineTo(75.828302, 91.084253);
+        crc2.bezierCurveTo(50, 94, 51, 95, 51, 95);
+        crc2.bezierCurveTo(51, 94, 51, 95, 51, 95);
+        crc2.bezierCurveTo(51, 96, 51, 96, 51, 96);
+        crc2.bezierCurveTo(54, 95, 55, 95, 56, 93);
+        crc2.bezierCurveTo(57, 91, 59, 90, 60, 89);
+        crc2.bezierCurveTo(59, 90, 58, 90, 57, 91);
+        crc2.bezierCurveTo(57, 91, 58, 91, 58, 91);
+        crc2.bezierCurveTo(58, 90, 59, 90, 59, 90);
+        crc2.bezierCurveTo(61, 90, 64, 91, 66, 91);
+        crc2.bezierCurveTo(70, 92, 68, 92, 72, 93);
+        crc2.lineTo(75, 91);
+        crc2.lineTo(75, 91);
         crc2.bezierCurveTo(71.716034, 90.217328, 73.807041, 90.649845, 69.554957, 89.788271);
         crc2.bezierCurveTo(68.329452, 89.539851, 65.478410, 88.943713, 64.129977, 88.732732);
         crc2.bezierCurveTo(63.354232, 88.611354, 62.434019, 88.465082, 61.630308, 88.624700);
@@ -334,29 +335,7 @@ var L08Strand;
         crc2.fill();
         crc2.stroke();
     }
-    //Funktion Figuren + Surfer dankend übernommen von Anja Weber + Erklärung :) 
-    function drawCloud3(_position, _size) {
-        console.log("Cloud 2", _position, _size);
-        let nParticles = 20;
-        let radiusParticle = 50;
-        let particle = new Path2D();
-        let gradient = crc2.createRadialGradient(0, 0, 0, 0, 0, radiusParticle);
-        particle.arc(0, 0, radiusParticle, 0, 2 * Math.PI);
-        gradient.addColorStop(0, "HSLA(0, 100%, 100%, 0.5)");
-        gradient.addColorStop(1, "HSLA(0, 100%, 100%, 0)");
-        crc2.save();
-        crc2.translate(_position.x, _position.y);
-        crc2.fillStyle = gradient;
-        for (let drawn = 0; drawn < nParticles; drawn++) {
-            crc2.save();
-            let x = (Math.random() - 0.5) * _size.x;
-            let y = -(Math.random() * _size.y);
-            crc2.translate(x, y);
-            crc2.fill(particle);
-            crc2.restore();
-        }
-        crc2.restore();
-    }
+    //Funktion Figuren + Surfer dankend übernommen von Anja Weber + Erklärung :)  
     function drawPerson(_position, _clothes, _color) {
         // Hände
         crc2.beginPath();
