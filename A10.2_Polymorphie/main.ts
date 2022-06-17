@@ -1,5 +1,8 @@
-namespace BeachClasses {
+namespace BeachClasses10 {
 
+
+    //Ich habe versucht die Superclass einzufügen, aber ich habe wohl einen Denkfehler. 
+    //Würde versuchen das ganze nochmal hinzubekommen aber diese Woche war es mir leider nicht möglich. 
 
     window.addEventListener("load", handleLoad);
 
@@ -8,9 +11,9 @@ namespace BeachClasses {
     let imgData: ImageData;
 
     // Cloud-Arrays für Animation
-    let allClouds: Cloud[] = [];
-    let oneBoat: Boat [] = [];
-    let allBirds: Birds[] = [];
+    let allClouds: SuperclassMovable [] = [];
+    let oneBoat: SuperclassMovable [] = [];
+    let allBirds: SuperclassMovable [] = [];
     
 
     // Start

@@ -1,11 +1,17 @@
-namespace BeachClasses {
+namespace BeachClasses10 {
 
-    export class Cloud {
+    export class Cloud extends SuperclassMovable {
 
         x: number;
         y: number;
         speed: number;
-        push: any;
+
+       constructor(x: number, y: number) {
+            super(x, y);
+            this.moveForward();
+            this.drawCloud();
+        }
+    
 
     
         drawCloud(): void {

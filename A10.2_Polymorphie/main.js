@@ -1,6 +1,8 @@
 "use strict";
-var BeachClasses;
-(function (BeachClasses) {
+var BeachClasses10;
+(function (BeachClasses10) {
+    //Ich habe versucht die Superclass einzufügen, aber ich habe wohl einen Denkfehler. 
+    //Würde versuchen das ganze nochmal hinzubekommen aber diese Woche war es mir leider nicht möglich. 
     window.addEventListener("load", handleLoad);
     let canvas;
     let imgData;
@@ -11,24 +13,24 @@ var BeachClasses;
     // Start
     function handleLoad(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
-        BeachClasses.crc2 = canvas.getContext("2d");
+        BeachClasses10.crc2 = canvas.getContext("2d");
         //Hintergund mittels einer Klasse erstellen
-        let bG = new BeachClasses.Background;
+        let bG = new BeachClasses10.Background;
         console.log(bG);
         //Speichern des Canvas als Bild (natürlich nachdem das Hintergrundbild gemalt wurde)
-        imgData = BeachClasses.crc2.getImageData(0, 0, canvas.width, canvas.height);
+        imgData = BeachClasses10.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //Boot erstellen
         createBoat(1);
         //Erscheinen der Vögel
         for (let i = 0; i < 3; i++) {
-            let b = new BeachClasses.Birds();
+            let b = new BeachClasses10.Birds();
             allBirds[i] = b;
         }
         //Wolken platzieren
         for (let i = 0; i < 10; i++) {
-            let allClouds = new BeachClasses.Cloud();
-            allClouds.x = Math.random() * BeachClasses.crc2.canvas.width;
-            allClouds.y = Math.random() * BeachClasses.crc2.canvas.height - 550;
+            let allClouds = new BeachClasses10.Cloud();
+            allClouds.x = Math.random() * BeachClasses10.crc2.canvas.width;
+            allClouds.y = Math.random() * BeachClasses10.crc2.canvas.height - 550;
             allClouds.speed = (Math.random() + 1) * 0.5;
             allClouds.push(allClouds); // Wolke wird ins Array gepusht um beim animieren auf sie zugreifen zu können.
         }
@@ -37,14 +39,14 @@ var BeachClasses;
     //Funktion Boot
     function createBoat(_n) {
         for (let index = 0; index < _n; index++) {
-            let boat1 = new BeachClasses.Boat();
+            let boat1 = new BeachClasses10.Boat();
             oneBoat.push(boat1);
         }
     }
     // ANIMATIONEN:
     // Funktion um Vögel und Wolken zu animieren 
     function animate() {
-        BeachClasses.crc2.putImageData(imgData, 0, 0);
+        BeachClasses10.crc2.putImageData(imgData, 0, 0);
         for (let i = 0; i < allClouds.length; i++) {
             allClouds[i].moveForward();
             if (allClouds[i].x > +1300) {
@@ -63,5 +65,5 @@ var BeachClasses;
         for (let i = 0; i < allClouds.length; i++)
             allClouds[i].drawCloud();
     }
-})(BeachClasses || (BeachClasses = {}));
+})(BeachClasses10 || (BeachClasses10 = {}));
 //# sourceMappingURL=main.js.map

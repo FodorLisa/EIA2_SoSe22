@@ -1,10 +1,12 @@
+"use strict";
 var BeachClasses;
 (function (BeachClasses) {
-    var Boat = /** @class */ (function () {
-        function Boat() {
-        }
+    class Boat {
+        x;
+        y;
+        speed;
         //Methode DrawBoat
-        Boat.prototype.drawBoat = function () {
+        drawBoat() {
             BeachClasses.crc2.beginPath();
             BeachClasses.crc2.moveTo(this.x + 300, this.y + 150);
             BeachClasses.crc2.lineTo(this.x + 50, this.y + 150);
@@ -34,8 +36,8 @@ var BeachClasses;
             BeachClasses.crc2.fillStyle = "#fff";
             BeachClasses.crc2.lineWidth = 0.5;
             BeachClasses.crc2.fill();
-        };
-        Boat.prototype.moveForward = function () {
+        }
+        moveForward() {
             this.x += this.speed * +0.5; // - nach links und + nach rechts
             if (this.x < 0) {
                 this.x = this.x + BeachClasses.crc2.canvas.width;
@@ -43,9 +45,8 @@ var BeachClasses;
             if (this.x > BeachClasses.crc2.canvas.width) {
                 this.x = this.x - BeachClasses.crc2.canvas.width;
             }
-        };
-        return Boat;
-    }());
+        }
+    }
     BeachClasses.Boat = Boat;
 })(BeachClasses || (BeachClasses = {}));
 //# sourceMappingURL=Boat.js.map

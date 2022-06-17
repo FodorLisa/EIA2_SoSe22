@@ -1,13 +1,16 @@
-namespace BeachClasses {
+namespace BeachClasses10 {
 
-    export class Birds {
+    export class Birds extends SuperclassMoveable {
 
         x: number;
         y: number;
         speed: number;
 
+        
+
     constructor() { //Parameter _x: number, _y: number gelöscht
 
+        super();
             this.x = 300; // Ausgang Vögel
             this.y = 600;
             this.drawBirds();
