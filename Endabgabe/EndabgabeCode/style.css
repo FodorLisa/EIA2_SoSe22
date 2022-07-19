@@ -1,0 +1,13 @@
+.hidden {
+    display: none !important;
+}
+
+.game {
+    display: flex;
+    gap: 10px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+}
